@@ -1,9 +1,20 @@
 from tkinter import *
+import random
+
+
+def roll_dice():
+    max = side_choice.get()
+    roll = random.randint(1, max)
+    roll_value.set(roll)
+
 
 root = Tk()
 side_choice = IntVar()
+roll_value = IntVar()
+
 title_label = Label(root, text="Dice Roller")
 title_label.grid(row=1, column=1)
+
 
 four_sided = Radiobutton(root, text="4-sided", variable=side_choice, value=4)
 four_sided.grid(row=2, column=1)
@@ -20,10 +31,10 @@ ten_sided.grid(row=5, column=1)
 twenty_sided = Radiobutton(root, text="20-sided", variable=side_choice, value=20)
 twenty_sided.grid(row=6, column=1)
 
-roll_button = Button(root, text="Roll Die")
+roll_button = Button(root, text="Roll Die", command=roll_dice)
 roll_button.grid(row=7, column=1)
 
-roll_result = Label(root, text="0")
+roll_result = Label(root, textvariable=roll_value)
 roll_result.grid(row=8, column=11)
 
 root.mainloop()
