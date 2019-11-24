@@ -55,22 +55,22 @@ def add_number9():
     new_result += "9"
     display_result.set(new_result)
 
-def clculation1():
+def calculation1():
     new_result = display_result.get()
     new_result += "/"
     display_result.set(new_result)
 
-def clculation2():
+def calculation2():
     new_result = display_result.get()
     new_result += "+"
     display_result.set(new_result)
 
-def clculation3():
+def calculation3():
     new_result = display_result.get()
     new_result += "-"
     display_result.set(new_result)
 
-def clculation4():
+def calculation4():
     new_result = display_result.get()
     new_result += "*"
     display_result.set(new_result)
@@ -99,16 +99,16 @@ title_label = Entry(root, font = "Helvetica 24", textvariable = display_result, 
 title_label.grid(row=0, column=1, sticky = "W", columnspan = 3)
 
 
-sum = Button(root, text="+", font = "Helvetica 24", command = clculation2)
+sum = Button(root, text="+", font = "Helvetica 24", command = calculation2)
 sum.grid(row=2, column=4, sticky = "W")
 
-minus = Button(root, text="-", font = "Helvetica 24", command=clculation3)
+minus = Button(root, text="-", font = "Helvetica 24", command=calculation3)
 minus.grid(row=3, column=4, sticky = "W")
 
-multiply = Button(root, text="*", font = "Helvetica 24", command=clculation4)
+multiply = Button(root, text="*", font = "Helvetica 24", command=calculation4)
 multiply.grid(row=4, column=4, sticky = "W")
 
-division = Button(root, text="/", font = "Helvetica 24", command = clculation1)
+division = Button(root, text="/", font = "Helvetica 24", command = calculation1)
 division.grid(row=5, column=4, sticky = "W")
 
 clear = Button(root, text="clear", font = "Helvetica 24", command = clear)
